@@ -27,5 +27,4 @@ _See_ [Separate Compilation](https://www.cs.bu.edu/teaching/c/separate-compilati
 
 ## How to compile the separated files?
 
-Compile the source code separately into intermediate object files using ```gcc -c module1.c ```  
-An object file ```module1.o``` will be generated which can then be included in the final compilation using ```gcc module1.o module2.o main.c```
+Use ```make``` to compile the files
