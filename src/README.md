@@ -5,7 +5,14 @@
 * **Name_of_module.h**  
 The _interface_ of the module.  
 Should contain function prototypes, constants  
-**Note**: Remember to have [include guards](https://en.wikipedia.org/wiki/Include_guard)
+**Note**: Remember to have [include guards](https://en.wikipedia.org/wiki/Include_guard)  
+The header files must follow the following template:
+```
+#ifndef MODULE_NAME
+#define MODULE_NAME
+...Contents...
+#endif
+```
 
 * **Name_of_module.c**  
 The _implementation_ of the module.  
@@ -17,3 +24,8 @@ Include the header file & use the function & constants
 **Note**: Include the custom header files as ```#include "custom-module-name.h"```
 
 _See_ [Separate Compilation](https://www.cs.bu.edu/teaching/c/separate-compilation/) for more details
+
+## How to compile the separated files?
+
+Compile the source code separately into intermediate object files using ```gcc -c module1.c ```  
+An object file ```module1.o``` will be generated which can then be included in the final compilation using ```gcc module1.o module2.o main.c```
