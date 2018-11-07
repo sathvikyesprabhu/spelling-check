@@ -8,6 +8,8 @@
 #include<ctype.h>
 #include<string.h>
 
-int readFile(char* input_file_name, ENTRY dict);
+#define DICTIONARY "../lib/big.txt"
+
+int readFile(ENTRY dict);
 
 #endif

@@ -22,11 +22,11 @@ static int update(char *word)
   return 1;
 }
 
-int readFile(char* input_file_name, ENTRY dict)
+int readFile(ENTRY dict)
 {
   char *line, *word, *w;
   int file_size = 0;
-  FILE *input_file_object = fopen(input_file_name, "r");
+  FILE *input_file_object = fopen(DICTIONARY, "r");
 
   if (!input_file_object)
     return 0;
