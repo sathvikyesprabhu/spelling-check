@@ -1,5 +1,27 @@
 #include "IO.h"
 
+static const char delim[] = {".,:;`/\"+-_(){}[]<>*&^%$#@!?~/|\\=1234567890 \t\n"};
+
+static ENTRY *find(char *word)
+{
+  ENTRY e;
+
+  e.key = word;
+  return hsearch(e, FIND);
+}
+
+static int update(char *word)
+{
+  ENTRY *e = find(word);
+
+  if (!e)
+  return 0;
+
+  e->data++;
+
+  return 1;
+}
+
 int readFile(char* input_file_name, ENTRY dict)
 {
   char *line, *word, *w;
