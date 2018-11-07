@@ -24,7 +24,3 @@ Include the header file & use the function & constants
 **Note**: Include the custom header files as ```#include "custom-module-name.h"```
 
 _See_ [Separate Compilation](https://www.cs.bu.edu/teaching/c/separate-compilation/) for more details
-
-## How to compile the separated files?
-
-Use ```make``` to compile the files
